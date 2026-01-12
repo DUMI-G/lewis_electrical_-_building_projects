@@ -43,8 +43,12 @@ export default function Navbar() {
               <span className="text-white font-bold text-xl">LE</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Lewis Electrical</h1>
-              <p className="text-xs text-gray-600">Building Projects</p>
+              <h1 className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'
+              }`}>Lewis Electrical</h1>
+              <p className={`text-xs transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-gray-200 drop-shadow-md'
+              }`}>Building Projects</p>
             </div>
           </motion.div>
 
@@ -57,7 +61,11 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                className={`font-medium transition-colors duration-300 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-primary-600' 
+                    : 'text-white hover:text-accent-300 drop-shadow-md'
+                }`}
               >
                 {item}
               </motion.button>
@@ -70,9 +78,15 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-gray-900 transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`w-full h-0.5 bg-gray-900 transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-              <span className={`w-full h-0.5 bg-gray-900 transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`w-full h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white drop-shadow-md'
+              } ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`w-full h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white drop-shadow-md'
+              } ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`w-full h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white drop-shadow-md'
+              } ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
             </div>
           </button>
         </div>

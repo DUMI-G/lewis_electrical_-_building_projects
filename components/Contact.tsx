@@ -150,7 +150,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
-                placeholder="John Doe"
+                placeholder="Lewis Electrical"
               />
             </div>
 
@@ -167,7 +167,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
-                  placeholder="john@example.com"
+                  placeholder="lewis@example.com"
                 />
               </div>
 
@@ -183,7 +183,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
-                  placeholder="+27 123 456 789"
+                  placeholder="+27 736457728"
                 />
               </div>
             </div>
