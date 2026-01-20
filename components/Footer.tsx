@@ -35,8 +35,8 @@ export default function Footer() {
       <div className="section-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Company Info */}
-          <div className="text-center sm:text-left lg:col-span-1">
-            <div className="flex items-center justify-center sm:justify-start space-x-3 mb-6">
+          <div className="text-left lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-primary-600/10 to-accent-600/10 backdrop-blur-sm rounded-xl border border-primary-600/20 flex items-center justify-center p-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <img 
                   src="/images/REMADE1.png" 
@@ -49,10 +49,10 @@ export default function Footer() {
                 <p className="text-sm text-gray-400">Building Projects</p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6 text-sm max-w-xs mx-auto sm:mx-0">
+            <p className="text-gray-400 leading-relaxed mb-6 text-sm max-w-xs">
               Professional electrical and industrial services across Johannesburg. Quality craftsmanship you can trust.
             </p>
-            <div className="flex justify-center sm:justify-start space-x-4">
+            <div className="flex space-x-4">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -89,14 +89,14 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="text-center sm:text-left">
+          <div className="text-left">
             <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-400 hover:text-primary-400 transition-colors text-sm block w-full text-center sm:text-left py-1"
+                    className="text-gray-400 hover:text-primary-400 transition-colors text-sm block w-full text-left py-1"
                   >
                     {link.name}
                   </button>
@@ -106,12 +106,12 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="text-center sm:text-left">
+          <div className="text-left">
             <h4 className="text-lg font-bold mb-4 text-white">Our Services</h4>
             <ul className="space-y-3">
               {services.slice(0, 6).map((service) => (
                 <li key={service}>
-                  <a href="#services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm block w-full text-center sm:text-left py-1">
+                  <a href="#services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm block w-full text-left py-1">
                     {service}
                   </a>
                 </li>
@@ -120,11 +120,11 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="text-center sm:text-left">
+          <div className="text-left">
             <h4 className="text-lg font-bold mb-4 text-white">Contact Us</h4>
             <div className="space-y-4">
               {/* Address */}
-              <div className="flex items-start space-x-3 justify-center sm:justify-start">
+              <div className="flex items-start space-x-3">
                 <div className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5">
                   <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -140,7 +140,7 @@ export default function Footer() {
               </div>
               
               {/* Phone */}
-              <div className="flex items-center space-x-3 justify-center sm:justify-start">
+              <div className="flex items-center space-x-3">
                 <div className="w-5 h-5 text-primary-500 flex-shrink-0">
                   <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -152,7 +152,7 @@ export default function Footer() {
               </div>
               
               {/* Email */}
-              <div className="flex items-center space-x-3 justify-center sm:justify-start">
+              <div className="flex items-center space-x-3">
                 <div className="w-5 h-5 text-primary-500 flex-shrink-0">
                   <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
