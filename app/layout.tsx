@@ -10,10 +10,28 @@ export const metadata: Metadata = {
   keywords: 'electrical services, industrial electrical, plumbing, welding, Johannesburg, Benoni, panel wiring, DB board inspection',
   authors: [{ name: 'Lewis Electrical & Building Projects' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/images/REMADE1.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/REMADE1.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/REMADE1.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Lewis Electrical & Building Projects',
     description: 'Professional Electrical & Industrial Services in Johannesburg',
     type: 'website',
+    images: [
+      {
+        url: '/images/REMADE1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lewis Electrical & Building Projects Logo',
+      },
+    ],
   },
 }
 
