@@ -39,8 +39,16 @@ export default function Navbar() {
             transition={{ delay: 0.2 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">LE</span>
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center p-2 transition-all duration-300 ${
+              isScrolled 
+                ? 'bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-200 shadow-sm' 
+                : 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg'
+            }`}>
+              <img 
+                src="/images/REMADE1.png" 
+                alt="Lewis Electrical Logo"
+                className="w-full h-full object-contain filter drop-shadow-sm"
+              />
             </div>
             <div>
               <h1 className={`text-xl font-bold transition-colors duration-300 ${

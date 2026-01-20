@@ -49,50 +49,51 @@ export default function About() {
 
   return (
     <section id="about" ref={ref} className="section-container bg-white">
-      <div className="text-center mb-16">
+      <div className="text-center mb-12 sm:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="section-title mb-4">
             About <span className="gradient-text">Our Company</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-6" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-4 sm:mb-6" />
+          <p className="section-subtitle text-gray-600 max-w-3xl mx-auto px-4">
             Lewis Electrical & Building Projects delivers comprehensive electrical and industrial solutions across Johannesburg
           </p>
         </motion.div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 sm:mb-16">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
+          className="order-2 md:order-1"
         >
-          <h3 className="text-3xl font-bold mb-6 text-gray-900">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900 text-center md:text-left">
             Your Trusted Partner in Electrical Excellence
           </h3>
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
             Based in Benoni, Johannesburg, we specialize in providing top-tier electrical installation, 
             maintenance, and industrial services to businesses across South Africa. Our commitment to 
             excellence and safety has made us a preferred choice for commercial and industrial projects.
           </p>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
             From complex panel wiring to industrial pump installations, our certified team handles projects 
             of all scales with precision and professionalism. We combine technical expertise with customer-focused 
             service to deliver solutions that power your success.
           </p>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center md:justify-start space-x-4">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 border-2 border-white flex items-center justify-center text-white font-bold text-sm">
+                <div key={i} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 border-2 border-white flex items-center justify-center text-white font-bold text-xs sm:text-sm">
                   {i}
                 </div>
               ))}
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-xs sm:text-sm text-gray-600 text-center md:text-left">
               <div className="font-semibold">Trusted by 500+ Clients</div>
               <div className="text-gray-500">Across South Africa</div>
             </div>
@@ -103,7 +104,7 @@ export default function About() {
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 order-1 md:order-2"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -111,13 +112,13 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 hover:shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-white p-4 sm:p-6 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 hover:shadow-lg text-center sm:text-left"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center text-white mb-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center text-white mb-3 sm:mb-4 mx-auto sm:mx-0">
                 {feature.icon}
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">{feature.title}</h4>
-              <p className="text-sm text-gray-600">{feature.description}</p>
+              <h4 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">{feature.title}</h4>
+              <p className="text-xs sm:text-sm text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

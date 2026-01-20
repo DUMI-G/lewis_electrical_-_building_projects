@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert electrical installation, maintenance, plumbing, and welding services in Johannesburg. Commercial and industrial solutions by Lewis Electrical & Building Projects.',
   keywords: 'electrical services, industrial electrical, plumbing, welding, Johannesburg, Benoni, panel wiring, DB board inspection',
   authors: [{ name: 'Lewis Electrical & Building Projects' }],
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
   openGraph: {
     title: 'Lewis Electrical & Building Projects',
     description: 'Professional Electrical & Industrial Services in Johannesburg',

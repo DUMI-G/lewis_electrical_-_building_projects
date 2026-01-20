@@ -65,36 +65,37 @@ export default function Contact() {
 
   return (
     <section id="contact" ref={ref} className="section-container bg-white">
-      <div className="text-center mb-16">
+      <div className="text-center mb-12 sm:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="section-title mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-6" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-4 sm:mb-6" />
+          <p className="section-subtitle text-gray-600 max-w-3xl mx-auto px-4">
             Ready to start your project? Contact us today for a free consultation
           </p>
         </motion.div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
+          className="order-2 lg:order-1"
         >
-          <h3 className="text-2xl font-bold mb-6 text-gray-900">Contact Information</h3>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-900 text-center lg:text-left">Contact Information</h3>
+          <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base text-center lg:text-left">
             Reach out to Lewis Electrical & Building Projects for professional electrical and industrial services. 
             We're here to help with your project needs.
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {contactInfo.map((item, index) => (
               <motion.a
                 key={item.title}
@@ -102,14 +103,14 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-xl hover:bg-gray-50 transition-colors group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                  <p className="text-gray-600">{item.value}</p>
+                  <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">{item.title}</h4>
+                  <p className="text-gray-600 text-sm sm:text-base break-words">{item.value}</p>
                 </div>
               </motion.a>
             ))}
@@ -119,12 +120,12 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-8 p-6 bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl border border-primary-100"
+            className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl border border-primary-100"
           >
-            <h4 className="font-bold text-gray-900 mb-2">Business Hours</h4>
-            <div className="space-y-1 text-gray-600">
+            <h4 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">Business Hours</h4>
+            <div className="space-y-1 text-gray-600 text-xs sm:text-sm">
               <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-              <p>Saturday: 8:00 AM - 1:00 PM</p>
+              <p>Saturday: 9:00 AM - 2:00 PM</p>
               <p>Sunday: Closed</p>
               <p className="text-primary-600 font-semibold mt-2">24/7 Emergency Service Available</p>
             </div>
@@ -136,8 +137,9 @@ export default function Contact() {
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="order-1 lg:order-2"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                 Full Name *
@@ -149,12 +151,12 @@ export default function Contact() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none text-sm sm:text-base"
                 placeholder="Lewis Electrical"
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                   Email Address *
@@ -166,7 +168,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none text-sm sm:text-base"
                   placeholder="lewis@example.com"
                 />
               </div>
@@ -182,7 +184,7 @@ export default function Contact() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none text-sm sm:text-base"
                   placeholder="+27 736457728"
                 />
               </div>
@@ -197,7 +199,7 @@ export default function Contact() {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none text-sm sm:text-base"
               >
                 <option value="">Select a service</option>
                 <option value="electrical">Electrical Installation & Maintenance</option>
@@ -222,8 +224,8 @@ export default function Contact() {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                rows={5}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none resize-none"
+                rows={4}
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all outline-none resize-none text-sm sm:text-base"
                 placeholder="Tell us about your project..."
               />
             </div>
@@ -233,7 +235,7 @@ export default function Contact() {
               className="w-full btn-primary justify-center"
             >
               Send Message
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
             </button>
